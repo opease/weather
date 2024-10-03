@@ -8,14 +8,14 @@ function App() {
         <Weather />
         <footer>
           This project was coded by{" "}
-          <a href="https://github.com/opease" target="_blank" rel="no-referrer">
+          <a href="https://github.com/opease" target="_blank" rel="noreferrer">
             Odille Pease
           </a>{" "}
           and is{" "}
           <a
             href="https://github.com/opease/weather"
             target="_blank"
-            rel="no-referrer"
+            rel="noreferrer"
           >
             open-sourced on GitHub
           </a>
