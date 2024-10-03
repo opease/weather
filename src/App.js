@@ -11,7 +11,11 @@ function App() {
             Odille Pease
           </a>{" "}
           and is{" "}
-          <a href="https://github.com/opease" target="_blank" rel="no-referrer">
+          <a
+            href="https://github.com/opease/weather"
+            target="_blank"
+            rel="no-referrer"
+          >
             open-sourced on GitHub
           </a>
         </footer>
