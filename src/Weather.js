@@ -64,7 +64,6 @@ export default function Weather(props) {
     );
   } else {
     const apiKey = "1a3fca45557083c6198e4bt6d7cf4o1c";
-    let city = "Cape Town";
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${props.defaultCity}&key=${apiKey}`;
 
     axios.get(apiUrl).then(handleResponse);
