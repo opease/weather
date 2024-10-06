@@ -5,11 +5,9 @@ import ForecastDay from "./ForecastDay";
 
 export default function Forecast(props) {
   let [loaded, setLoaded] = useState(false);
-  let [forecast, setForecast] = useState(null);
 
   function handleResponse(response) {
     setLoaded(true);
-    setForecast(response.data.daily);
   }
 
   if (loaded) {
