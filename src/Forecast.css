@@ -1,0 +1,31 @@
+.Forecast-Day {
+  /* text-align: center; */
+}
+
+.Forecast-Icon {
+  /* text-align: center; */
+  line-height: 0px;
+  height: 40px;
+}
+
+.Forecast img {
+  position: relative;
+  top: -18px;
+  line-height: 0;
+  margin: 5px;
+}
+
+.Forecast-Temperature {
+  /* text-align: center; */
+  font-size: 13px;
+}
+
+.Forecast .Min-Temp {
+  opacity: 0.6;
+  margin-left: 5px;
+}
+
+.Forecast {
+  padding: 0;
+  text-align: center;
+}

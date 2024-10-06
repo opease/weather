@@ -1,17 +1,17 @@
 export default function FormattedDate(props) {
   let days = [
+    "Sunday",
     "Monday",
     "Tuesday",
     "Wednesday",
     "Thursday",
     "Friday",
     "Saturday",
-    "Sunday",
   ];
 
-  let date = new Date(props.date * 1000);
+  let date = new Date(props.time * 1000);
 
-  let day = days[date.getDay() - 1];
+  let day = days[date.getDay()];
   let hour = date.getHours();
   let minutes = date.getMinutes();
 

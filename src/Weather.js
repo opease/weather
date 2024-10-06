@@ -2,35 +2,27 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
 import WeatherInfo from "./WeatherInfo";
+import Forecast from "./Forecast";
 
 export default function Weather(props) {
-  const [weatherData, setWeatherData] = useState({ ready: false });
+  const [weatherData, setWeatherData] = useState({});
+  const [ready, setReady] = useState(false);
   const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
-    setWeatherData({
-      ready: true,
-      temperature: Math.round(response.data.temperature.current),
-      city: response.data.city,
-      date: response.data.time,
-      description: response.data.condition.description,
-      icon: response.data.condition.icon_url,
-      humidity: response.data.temperature.humidity,
-      wind: response.data.wind.speed,
-    });
+    setWeatherData(response.data);
+    setReady(true);
   }
 
   function search(props) {
     const apiKey = "1a3fca45557083c6198e4bt6d7cf4o1c";
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}`;
 
     axios.get(apiUrl).then(handleResponse);
   }
 
   function handleSubmit(event) {
     event.preventDefault();
-
-    // hitting submit searches for a city
     search();
   }
 
@@ -38,7 +30,7 @@ export default function Weather(props) {
     setCity(event.target.value);
   }
 
-  if (weatherData.ready) {
+  if (ready) {
     return (
       <div className="Weather">
         <form onSubmit={handleSubmit}>
@@ -63,6 +55,7 @@ export default function Weather(props) {
           </div>
         </form>
         <WeatherInfo data={weatherData} />
+        <Forecast data={weatherData} />
       </div>
     );
   } else {

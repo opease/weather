@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <Weather defaultCity="Prague" />
+        <Weather defaultCity="Cape Town" />
         <footer>
           This project was coded by{" "}
           <a href="https://github.com/opease" target="_blank" rel="noreferrer">
