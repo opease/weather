@@ -17,19 +17,19 @@ export default function Forecast(props) {
       <div className="Forecast">
         <div className="row">
           <div className="col">
-            <ForecastDay data={forecast[1]} />
+            <ForecastDay data={props.data.daily[1]} />
           </div>
           <div className="col">
-            <ForecastDay data={forecast[2]} />
+            <ForecastDay data={props.data.daily[2]} />
           </div>
           <div className="col">
-            <ForecastDay data={forecast[3]} />
+            <ForecastDay data={props.data.daily[3]} />
           </div>
           <div className="col">
-            <ForecastDay data={forecast[4]} />
+            <ForecastDay data={props.data.daily[4]} />
           </div>
           <div className="col">
-            <ForecastDay data={forecast[5]} />
+            <ForecastDay data={props.data.daily[5]} />
           </div>
         </div>
       </div>
